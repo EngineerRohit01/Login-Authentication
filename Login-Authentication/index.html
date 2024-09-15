@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication SPA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Registration Page -->
+        <div id="register-page" class="form-container">
+            <h1>Create an Account</h1>
+            <div class="form-group">
+                <input type="text" id="register-username" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="register-password" placeholder="Enter Password" required>
+            </div>
+            <button class="btn" onclick="register()">Register</button>
+            <p class="message" id="register-message"></p>
+            <p>Already registered? <a href="#" onclick="showLoginPage()">Login here</a></p>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login-page" class="form-container" style="display:none;">
+            <h1>Login to Your Account</h1>
+            <div class="form-group">
+                <input type="text" id="login-username" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="login-password" placeholder="Enter Password" required>
+            </div>
+            <button class="btn" onclick="login()">Login</button>
+            <p class="message" id="login-message"></p>
+            <p>Not registered yet? <a href="#" onclick="showRegisterPage()">Create an account</a></p>
+        </div>
+
+        <!-- Secured Page -->
+        <div id="secured-page" class="form-container" style="display:none;">
+            <h1>Welcome to the Secured Page</h1>
+            <p>You have successfully logged in. This is the secured content.</p>
+            <button class="btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
